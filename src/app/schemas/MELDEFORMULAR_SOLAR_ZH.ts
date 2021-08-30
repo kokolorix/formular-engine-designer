@@ -1,11 +1,8 @@
-// import { ISchema, IComponent, SchemaManager } from 'src/app/components/bi-formular-engine/src/public-api';
+import { ISchema, IComponent, SchemaManager } from 'src/app/components/bi-formular-engine/src/public-api';
 // import { IdentityContextDTO } from '../api/model/models';
-import { inputGroup, inputGroupCL, label, w_full, card_panel, card_hint_panel, switch_hint_panel, checkBoxGroup } from '../schema-utils';
+import { inputGroup, inputGroupCL, label, w_full, card_panel, card_hint_panel, switch_hint_panel, checkBoxGroup } from './schema-utils';
 import * as moment from 'moment';
 // import { marker } from '@ngneat/transloco-keys-manager/marker';
-import { ISchema, IComponent, SchemaManager } from "src/bi-formular-engine/src/public-api";
-// import { card_hint_panel, card_panel, label_Input, schemaClassLayout } from "../schema-utils";
-
 
 const FORMULAR_TYP_MELDEFORMULAR_SOLAR_ZH = "MELDEFORMULAR_SOLAR_ZH";
 const FORMULAR_TYP_SITUATIONSPLAN = "SITUATIONSPLAN";

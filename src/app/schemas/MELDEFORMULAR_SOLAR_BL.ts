@@ -1,11 +1,8 @@
-// import { ISchema, IComponent, SchemaManager } from 'src/app/components/bi-formular-engine/src/public-api';
+import { ISchema, IComponent, SchemaManager } from 'src/app/components/bi-formular-engine/src/public-api';
 // import { IdentityContextDTO } from '../api/model/models';
-import { inputGroup, inputGroupCL, label, w_full, card_panel, card_hint_panel, switch_hint_panel, checkBoxGroup } from '../schema-utils';
+import { inputGroup, inputGroupCL, label, w_full, card_panel, card_hint_panel, switch_hint_panel, checkBoxGroup } from './schema-utils';
 import * as moment from 'moment';
 // import { marker } from '@ngneat/transloco-keys-manager/marker';
-import { ISchema, IComponent, SchemaManager } from "src/bi-formular-engine/src/public-api";
-// import { card_hint_panel, card_panel, label_Input, schemaClassLayout } from "../schema-utils";
-
 
 const FORMULAR_TYP_MELDEFORMULAR_SOLAR_BL = "MELDEFORMULAR_SOLAR_BL";
 const FORMULAR_TYP_SITUATIONSPLAN = "SITUATIONSPLAN";
@@ -227,11 +224,11 @@ export const MELDEFORMULAR_SOLAR_BL: ISchema = {
   //     { guid: FORMULAR_TYP_GRUNDRISSPLAN, titel: 'Grundrissplan' }, //zusätzlich bei BL
   //     { guid: FORMULAR_TYP_FASSADENPLAN, titel: 'Fassadenplan' },
   //  ],
-   steps: [
-      // { step: 1, titel: 'Sperren', status: MELDEFORMULAR_SOLAR_BL_Status.Sperren, target: 'MELDEFORMULAR_SOLAR_BL_Unterschriften' },
-      // { step: 2, titel: 'Senden', status: MELDEFORMULAR_SOLAR_BL_Status.Senden, target: 'MELDEFORMULAR_SOLAR_BL_Unterschriften' },
-      // { step: 3, titel: 'Antwort erhalten', status: MELDEFORMULAR_SOLAR_BL_Status.Gesendet, target: 'MELDEFORMULAR_SOLAR_BL_Unterschriften' },
-   ],
+  //  steps: [
+  //     { step: 1, titel: 'Sperren', status: MELDEFORMULAR_SOLAR_BL_Status.Sperren, target: 'MELDEFORMULAR_SOLAR_BL_Unterschriften' },
+  //     { step: 2, titel: 'Senden', status: MELDEFORMULAR_SOLAR_BL_Status.Senden, target: 'MELDEFORMULAR_SOLAR_BL_Unterschriften' },
+  //     { step: 3, titel: 'Antwort erhalten', status: MELDEFORMULAR_SOLAR_BL_Status.Gesendet, target: 'MELDEFORMULAR_SOLAR_BL_Unterschriften' },
+  //  ],
    classLayout: 'w-full',
    children: [
       MELDEFORMULAR_SOLAR_BL_AnlageStandort,
@@ -392,13 +389,13 @@ export const MELDEFORMULAR_SOLAR_BL: ISchema = {
   //     sm.getCompByField('PV_JAHRESERTRAG').required = sm.Values.PV_ANLAGE;
   //     sm.getCompByField('PV_INBETRIEBNAHME').required = true;
 
-  //     // if ((comp.required || comp.parentComp?.required) && sm.Values.FormStatus == MELDEFORMULAR_SOLAR_BL_Status.InArbeit) {
-  //       //  const mussfelder = { anzahl: 0, filled: 0 }
-  //       //  sm.GetFormularMussfelder(mussfelder);
-  //       //  if (mussfelder.anzahl === mussfelder.filled)
-  //           // sm.Schema.setStatus(sm, MELDEFORMULAR_SOLAR_BL_Status.Sperren);
-  //       //  else
-  //           // sm.Schema.setStatus(sm, MELDEFORMULAR_SOLAR_BL_Status.InArbeit);
+  //     if ((comp.required || comp.parentComp?.required) && sm.Values.FormStatus == MELDEFORMULAR_SOLAR_BL_Status.InArbeit) {
+  //        const mussfelder = { anzahl: 0, filled: 0 }
+  //        sm.GetFormularMussfelder(mussfelder);
+  //        if (mussfelder.anzahl === mussfelder.filled)
+  //           sm.Schema.setStatus(sm, MELDEFORMULAR_SOLAR_BL_Status.Sperren);
+  //        else
+  //           sm.Schema.setStatus(sm, MELDEFORMULAR_SOLAR_BL_Status.InArbeit);
   //     }
   //  },
   //  setStatus(sm: SchemaManager, status: MELDEFORMULAR_SOLAR_BL_Status) {
