@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ISchema, ISelectOptionItems, SchemaManager, SchemaManagerProvider } from 'src/bi-formular-engine/src/public-api';
+import { ISchema, ISelectOptionItems, SchemaManager, SchemaManagerProvider } from 'src/app/components/bi-formular-engine/src/public-api';
 import * as schemas from 'src/app/schemas';
-import { initInputWidths, initLabels } from './schema-utils';
+import { initInputWidths, initLabels } from './schemas/schema-utils';
 
 let _schema: ISchema
 let _SchemaManager: SchemaManager
@@ -22,6 +22,7 @@ export class AppComponent {
     children: [
       {
         type: 'select',
+        width: '50%',
         options() {
           return Object.values(schemas).map(s => s.label as string)
         },
@@ -38,7 +39,7 @@ export class AppComponent {
             initLabels(_SchemaManager)
             initInputWidths(_SchemaManager)
           }
-    
+
         },
       },
       {
@@ -51,7 +52,7 @@ export class AppComponent {
         type: 'divider',
         style: 'margin-bottom: 10px'
       }
-    
+
     ]
   }
 
